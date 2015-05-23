@@ -6,7 +6,7 @@
 #with the average of each variable for each activity and each subject.
 
 # Do it slightly out of order. Label and give avtivity names 
-#and then find mean std stad columns
+#and then find mean and standard deviation in columns
 
 #load libraries
 install.packages("reshape2")
@@ -16,18 +16,18 @@ library(plyr)
 install.packages("dplyr")
 library(dplyr)
 
-#1. Merges the training and the test sets to create one data set.
+#1. Reads in tables
 TestX <- read.table("./test/X_test.txt")
 TrainX <- read.table("./train/X_train.txt")
 TestY <- read.table("./test/Y_test.txt")
 TrainY <- read.table("./train/Y_train.txt")
 TrainSub <- read.table("./train/subject_train.txt")
 TestSub <- read.table("./test/subject_test.txt")
+Actlabel <- read.table("./activity_labels.txt")
+features <- read.table("./features.txt")
 
 # 3 and 4 Gives desscriptive activity names and 
 # labels the data set with descriptive variable names
-Actlabel <- read.table("./activity_labels.txt")
-features <- read.table("./features.txt")
 
 colnames(TestX)<-features$V2
 colnames(TrainX)<-features$V2
@@ -37,15 +37,18 @@ colnames(TestSub)<-c("Subject")
 colnames(TrainSub)<-c("Subject")
 
 #Merge after new labels
+#Combine by Test tables by Columns
 CompTest <- cbind(TestX, TestY, TestSub)
+#Combine Train tables by columns
 CompTrain <- cbind(TrainX, TrainY, TrainSub)
+#Combine by rows Test and Train Tables
 CompAll <- rbind(CompTest, CompTrain)
 #Give descriptive activity names after the merge
 CompAll$Activity <- factor(CompAll$Activity, Actlabel[[1]], Actlabel[[2]])
 #write.table(CompAll, file="CompAll.txt", row.names=FALSE)
 
 #2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-
+#Now that data has been merged extract columns and create new table
 meanstd <- CompAll[, grep("mean|std|Subject|Activity", names(CompAll))]
 #write.table(CompAll, file="CompAllmeanstd.txt", row.names=FALSE)
 
