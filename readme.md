@@ -1,4 +1,4 @@
-run_analysis.R
+<br>run_analysis.R</b>
 
 This R script takes 
 
@@ -31,7 +31,7 @@ The run_anaylis.R will be able to do the follwoing
       
 2.Read all the tables from the zip file and give them a name<BR>
 
-3.Rename the activities names to be descriptive from the ‘activity_labels.txt’ file<BR>
+3.Rename the activities names to be descriptive from the â€˜activity_labels.txtâ€™ file<BR>
 
 4.Label the data set with descriptive variable names<BR>
 
