@@ -7,7 +7,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The data set is a set of experiments carried out by a group of 30 volunteers within an age bracket of 19-48 years. They each consisted of performing six activity and each activity was recorded by a Samsung Galaxy S II. The activities were:
 Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, and Laying. Using the embedded accelerometer and gyroscope each activity was captured with 3-axiela linear acceleration and 3-axial angular velocity. 
 
-All data can be found in:
+<b>All data can be found in:</B>
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 All files came from these .txt files
@@ -26,6 +26,7 @@ All files came from these .txt files
       
       'test/y_test.txt': Test labels.
 
+<B>Code</B><BR>
 1.1 Load all libraries<BR>
 
       1.2 reshape2
