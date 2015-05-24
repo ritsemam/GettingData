@@ -27,9 +27,9 @@ All files came from these .txt files
       'test/y_test.txt': Test labels.
 
 1.1 Load all libraries<BR>
-                1.2 reshape2<BR>
-                1.3 plyr<BR>
-                1.4 dplyr<BR>
+      1.a reshape2<BR>
+      1.b plyr<BR>
+      1.c dplyr<BR>
 2.Read all the tables from the zip file and give them a name<BR>
 
 3.Rename the activities names to be descriptive from the ‘activity_labels.txt’ file<BR>
