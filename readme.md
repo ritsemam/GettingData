@@ -1,4 +1,4 @@
-<br>run_analysis.R</b>
+<b>run_analysis.R</b>
 
 This R script takes 
 
